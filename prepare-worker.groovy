@@ -1,4 +1,3 @@
-
 properties([
     parameters([
         string(defaultValue: '', description: 'Input node IP', name: 'SSHNODE', trim: true)
