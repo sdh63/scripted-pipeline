@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 properties([
     parameters([
         string(defaultValue: '', description: 'Provide node IP', name: 'node', trim: true)
