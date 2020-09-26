@@ -19,4 +19,8 @@ node {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install ansible -y"
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 80415d006897bfc85c7edd04f376aea9487d38f1
