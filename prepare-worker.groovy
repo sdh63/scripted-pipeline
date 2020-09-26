@@ -19,4 +19,4 @@ node {
         stage("Install ansible") {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install ansible -y"
         }
-}
+    } 
