@@ -18,9 +18,8 @@ node {
         stage("Install Ansible") {
             sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } yum install ansible -y"
         }
+        stage("Install Terraform") {
+            sh "ssh -o StrictHostKeyChecking=no -i $SSHKEY $SSHUSERNAME@${ params.SSHNODE } 'yum install -y wget unzip && wget https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip && unzip terraform_0.13.1_linux_amd64.zip && mv terraform /usr/bin/'"
+        }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 80415d006897bfc85c7edd04f376aea9487d38f1
