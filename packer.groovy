@@ -34,7 +34,7 @@ node {
                 sh 'packer build apache.json'
             }   
 
-            stage('Creaet Instance') {
+            stage('Create Instance') {
                 sh 'packer build apache.json'
             }
         }     
