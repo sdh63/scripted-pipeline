@@ -24,7 +24,7 @@ node {
         git 'https://github.com/ikambarov/packer.git'
     }
 
-    withCredentials([usernamePassword(credentialsId: 'aws_jenkins_key', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
+    withCredentials([usernamePassword(credentialsId: 'AWS_Jenkins_key', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
         withEnv(["AWS_REGION=${aws_region_var}", "PACKER_AMI_NAME=apache-${UUID.randomUUID().toString()}"]) {
             stage('Packer Validate') {
                 sh 'packer validate apache.json'
